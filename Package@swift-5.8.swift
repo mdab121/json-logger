@@ -18,11 +18,11 @@ let package = Package(
 	],
 	dependencies: [
 		.package(url: "https://github.com/apple/swift-log.git",      from: "1.5.1"),
-		.package(url: "https://github.com/Frizlab/generic-json.git", from: "3.1.3"),
+    .package(url: "https://github.com/iwill/generic-json-swift", from: "2.0.0"),
 	],
 	targets: [
 		.target(name: "JSONLogger", dependencies: [
-			.product(name: "GenericJSON",   package: "generic-json"),
+			.product(name: "GenericJSON",   package: "generic-json-swift"),
 			.product(name: "Logging",       package: "swift-log"),
 		], path: "Sources", exclude: ["JSONLogger+NoSendable.swift"], swiftSettings: swiftSettings),
 		.testTarget(name: "JSONLoggerTests", dependencies: ["JSONLogger"], swiftSettings: swiftSettings),
