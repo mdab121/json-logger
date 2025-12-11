@@ -74,10 +74,10 @@ public struct LogLine : Hashable, Codable {
 	}
 	
 	enum CodingKeys : String, CodingKey {
-		case level
-		case message
+		case level = "@l"
+		case message = "@m"
 		case metadata
-		case date
+		case date = "@t"
 		case mangledDate = "date-1970"
 		case label
 		case source
